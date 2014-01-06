@@ -79,7 +79,7 @@
     [dateFormatterOutput setDateFormat:@"MMMM d, yyyy h:mm a"];
     NSString *formattedDateString = [dateFormatterOutput stringFromDate:dateInput];
     
-    NSString *finalText = [[NSString alloc] initWithFormat:@"<body style='margin:1.5em;'>%@ <div style='color:#666;float:right;margin:1em;'>&ndash; %@</div></body>", text, formattedDateString];
+    NSString *finalText = [[NSString alloc] initWithFormat:@"<body style='margin:1.5em;font-size:larger;'>%@ <div style='color:#666;float:right;margin:1em;'>&ndash; %@</div></body>", text, formattedDateString];
     [self.messageText loadHTMLString:finalText baseURL:nil];
 }
 

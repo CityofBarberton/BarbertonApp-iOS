@@ -42,6 +42,9 @@
 		7D274403187AF97100DBAFD8 /* barberton-0058.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D274400187AF97100DBAFD8 /* barberton-0058.png */; };
 		7D274404187AF97100DBAFD8 /* barberton-0080.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D274401187AF97100DBAFD8 /* barberton-0080.png */; };
 		7D274405187AF97100DBAFD8 /* barberton-0120.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D274402187AF97100DBAFD8 /* barberton-0120.png */; };
+		7D27440F187AFD8200DBAFD8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27440C187AFD8200DBAFD8 /* Default.png */; };
+		7D274410187AFD8200DBAFD8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27440D187AFD8200DBAFD8 /* Default-568h@2x.png */; };
+		7D274411187AFD8200DBAFD8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27440E187AFD8200DBAFD8 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,9 @@
 		7D274400187AF97100DBAFD8 /* barberton-0058.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barberton-0058.png"; sourceTree = "<group>"; };
 		7D274401187AF97100DBAFD8 /* barberton-0080.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barberton-0080.png"; sourceTree = "<group>"; };
 		7D274402187AF97100DBAFD8 /* barberton-0120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barberton-0120.png"; sourceTree = "<group>"; };
+		7D27440C187AFD8200DBAFD8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7D27440D187AFD8200DBAFD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7D27440E187AFD8200DBAFD8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +207,9 @@
 				7D274401187AF97100DBAFD8 /* barberton-0080.png */,
 				7D274402187AF97100DBAFD8 /* barberton-0120.png */,
 				7D2743FB1879AC9B00DBAFD8 /* barberton_crest.png */,
+				7D27440C187AFD8200DBAFD8 /* Default.png */,
+				7D27440E187AFD8200DBAFD8 /* Default@2x.png */,
+				7D27440D187AFD8200DBAFD8 /* Default-568h@2x.png */,
 				7D2743931879A2CC00DBAFD8 /* barberton-Info.plist */,
 				7D2743941879A2CC00DBAFD8 /* InfoPlist.strings */,
 				7D2743971879A2CC00DBAFD8 /* main.m */,
@@ -352,8 +361,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D2743A21879A2CC00DBAFD8 /* Main_iPad.storyboard in Resources */,
+				7D27440F187AFD8200DBAFD8 /* Default.png in Resources */,
 				7D274404187AF97100DBAFD8 /* barberton-0080.png in Resources */,
+				7D274410187AFD8200DBAFD8 /* Default-568h@2x.png in Resources */,
 				7D2743FC1879AC9B00DBAFD8 /* barberton_crest.png in Resources */,
+				7D274411187AFD8200DBAFD8 /* Default@2x.png in Resources */,
 				7D274403187AF97100DBAFD8 /* barberton-0058.png in Resources */,
 				7D274405187AF97100DBAFD8 /* barberton-0120.png in Resources */,
 				7D2743AA1879A2CC00DBAFD8 /* Images.xcassets in Resources */,
