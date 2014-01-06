@@ -1,5 +1,5 @@
 //
-//  BTNFirstViewController.h
+//  BTNSecondViewController.h
 //  barberton
 //
 //  Created by Christopher Stoll on 1/5/14.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BTNFirstViewController : UIViewController
+@interface BTNServicesViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end

@@ -15,14 +15,33 @@
 		7D27439C1879A2CC00DBAFD8 /* BTNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D27439B1879A2CC00DBAFD8 /* BTNAppDelegate.m */; };
 		7D27439F1879A2CC00DBAFD8 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D27439D1879A2CC00DBAFD8 /* Main_iPhone.storyboard */; };
 		7D2743A21879A2CC00DBAFD8 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2743A01879A2CC00DBAFD8 /* Main_iPad.storyboard */; };
-		7D2743A51879A2CC00DBAFD8 /* BTNFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743A41879A2CC00DBAFD8 /* BTNFirstViewController.m */; };
-		7D2743A81879A2CC00DBAFD8 /* BTNSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743A71879A2CC00DBAFD8 /* BTNSecondViewController.m */; };
+		7D2743A51879A2CC00DBAFD8 /* BTNNewsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743A41879A2CC00DBAFD8 /* BTNNewsMasterViewController.m */; };
+		7D2743A81879A2CC00DBAFD8 /* BTNServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743A71879A2CC00DBAFD8 /* BTNServicesViewController.m */; };
 		7D2743AA1879A2CC00DBAFD8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D2743A91879A2CC00DBAFD8 /* Images.xcassets */; };
 		7D2743B11879A2CC00DBAFD8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2743B01879A2CC00DBAFD8 /* XCTest.framework */; };
 		7D2743B21879A2CC00DBAFD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D27438B1879A2CC00DBAFD8 /* Foundation.framework */; };
 		7D2743B31879A2CC00DBAFD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D27438F1879A2CC00DBAFD8 /* UIKit.framework */; };
 		7D2743BB1879A2CC00DBAFD8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D2743B91879A2CC00DBAFD8 /* InfoPlist.strings */; };
 		7D2743BD1879A2CC00DBAFD8 /* barbertonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743BC1879A2CC00DBAFD8 /* barbertonTests.m */; };
+		7D2743E81879A4C700DBAFD8 /* NSDateFormatter+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743D01879A4C700DBAFD8 /* NSDateFormatter+STTwitter.m */; };
+		7D2743E91879A4C700DBAFD8 /* NSString+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743D21879A4C700DBAFD8 /* NSString+STTwitter.m */; };
+		7D2743EA1879A4C700DBAFD8 /* STHTTPRequest+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743D41879A4C700DBAFD8 /* STHTTPRequest+STTwitter.m */; };
+		7D2743EB1879A4C700DBAFD8 /* STTwitterAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743D71879A4C700DBAFD8 /* STTwitterAPI.m */; };
+		7D2743EC1879A4C700DBAFD8 /* STTwitterAppOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743D91879A4C700DBAFD8 /* STTwitterAppOnly.m */; };
+		7D2743ED1879A4C700DBAFD8 /* STTwitterHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743DB1879A4C700DBAFD8 /* STTwitterHTML.m */; };
+		7D2743EE1879A4C700DBAFD8 /* STTwitterOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743DD1879A4C700DBAFD8 /* STTwitterOAuth.m */; };
+		7D2743EF1879A4C700DBAFD8 /* STTwitterOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743DF1879A4C700DBAFD8 /* STTwitterOS.m */; };
+		7D2743F01879A4C700DBAFD8 /* BAVPlistNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743E31879A4C700DBAFD8 /* BAVPlistNode.m */; };
+		7D2743F11879A4C700DBAFD8 /* JSONSyntaxHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743E51879A4C700DBAFD8 /* JSONSyntaxHighlight.m */; };
+		7D2743F21879A4C700DBAFD8 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743E71879A4C700DBAFD8 /* STHTTPRequest.m */; };
+		7D2743F41879A51E00DBAFD8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2743F31879A51E00DBAFD8 /* Accounts.framework */; };
+		7D2743F61879A52600DBAFD8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2743F51879A52600DBAFD8 /* Twitter.framework */; };
+		7D2743F81879A53300DBAFD8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2743F71879A53300DBAFD8 /* Social.framework */; };
+		7D2743FC1879AC9B00DBAFD8 /* barberton_crest.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D2743FB1879AC9B00DBAFD8 /* barberton_crest.png */; };
+		7D2743FF1879BD9000DBAFD8 /* BTNNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743FE1879BD9000DBAFD8 /* BTNNewsDetailViewController.m */; };
+		7D274403187AF97100DBAFD8 /* barberton-0058.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D274400187AF97100DBAFD8 /* barberton-0058.png */; };
+		7D274404187AF97100DBAFD8 /* barberton-0080.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D274401187AF97100DBAFD8 /* barberton-0080.png */; };
+		7D274405187AF97100DBAFD8 /* barberton-0120.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D274402187AF97100DBAFD8 /* barberton-0120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,16 +67,50 @@
 		7D27439B1879A2CC00DBAFD8 /* BTNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTNAppDelegate.m; sourceTree = "<group>"; };
 		7D27439E1879A2CC00DBAFD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		7D2743A11879A2CC00DBAFD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		7D2743A31879A2CC00DBAFD8 /* BTNFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTNFirstViewController.h; sourceTree = "<group>"; };
-		7D2743A41879A2CC00DBAFD8 /* BTNFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTNFirstViewController.m; sourceTree = "<group>"; };
-		7D2743A61879A2CC00DBAFD8 /* BTNSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTNSecondViewController.h; sourceTree = "<group>"; };
-		7D2743A71879A2CC00DBAFD8 /* BTNSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTNSecondViewController.m; sourceTree = "<group>"; };
+		7D2743A31879A2CC00DBAFD8 /* BTNNewsMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTNNewsMasterViewController.h; sourceTree = "<group>"; };
+		7D2743A41879A2CC00DBAFD8 /* BTNNewsMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTNNewsMasterViewController.m; sourceTree = "<group>"; };
+		7D2743A61879A2CC00DBAFD8 /* BTNServicesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTNServicesViewController.h; sourceTree = "<group>"; };
+		7D2743A71879A2CC00DBAFD8 /* BTNServicesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTNServicesViewController.m; sourceTree = "<group>"; };
 		7D2743A91879A2CC00DBAFD8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7D2743AF1879A2CC00DBAFD8 /* barbertonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barbertonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2743B01879A2CC00DBAFD8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7D2743B81879A2CC00DBAFD8 /* barbertonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "barbertonTests-Info.plist"; sourceTree = "<group>"; };
 		7D2743BA1879A2CC00DBAFD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7D2743BC1879A2CC00DBAFD8 /* barbertonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = barbertonTests.m; sourceTree = "<group>"; };
+		7D2743CF1879A4C700DBAFD8 /* NSDateFormatter+STTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+STTwitter.h"; sourceTree = "<group>"; };
+		7D2743D01879A4C700DBAFD8 /* NSDateFormatter+STTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+STTwitter.m"; sourceTree = "<group>"; };
+		7D2743D11879A4C700DBAFD8 /* NSString+STTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+STTwitter.h"; sourceTree = "<group>"; };
+		7D2743D21879A4C700DBAFD8 /* NSString+STTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+STTwitter.m"; sourceTree = "<group>"; };
+		7D2743D31879A4C700DBAFD8 /* STHTTPRequest+STTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "STHTTPRequest+STTwitter.h"; sourceTree = "<group>"; };
+		7D2743D41879A4C700DBAFD8 /* STHTTPRequest+STTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "STHTTPRequest+STTwitter.m"; sourceTree = "<group>"; };
+		7D2743D51879A4C700DBAFD8 /* STTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTwitter.h; sourceTree = "<group>"; };
+		7D2743D61879A4C700DBAFD8 /* STTwitterAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTwitterAPI.h; sourceTree = "<group>"; };
+		7D2743D71879A4C700DBAFD8 /* STTwitterAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTwitterAPI.m; sourceTree = "<group>"; };
+		7D2743D81879A4C700DBAFD8 /* STTwitterAppOnly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTwitterAppOnly.h; sourceTree = "<group>"; };
+		7D2743D91879A4C700DBAFD8 /* STTwitterAppOnly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTwitterAppOnly.m; sourceTree = "<group>"; };
+		7D2743DA1879A4C700DBAFD8 /* STTwitterHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTwitterHTML.h; sourceTree = "<group>"; };
+		7D2743DB1879A4C700DBAFD8 /* STTwitterHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTwitterHTML.m; sourceTree = "<group>"; };
+		7D2743DC1879A4C700DBAFD8 /* STTwitterOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTwitterOAuth.h; sourceTree = "<group>"; };
+		7D2743DD1879A4C700DBAFD8 /* STTwitterOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTwitterOAuth.m; sourceTree = "<group>"; };
+		7D2743DE1879A4C700DBAFD8 /* STTwitterOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTwitterOS.h; sourceTree = "<group>"; };
+		7D2743DF1879A4C700DBAFD8 /* STTwitterOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTwitterOS.m; sourceTree = "<group>"; };
+		7D2743E01879A4C700DBAFD8 /* STTwitterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTwitterProtocol.h; sourceTree = "<group>"; };
+		7D2743E21879A4C700DBAFD8 /* BAVPlistNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAVPlistNode.h; sourceTree = "<group>"; };
+		7D2743E31879A4C700DBAFD8 /* BAVPlistNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAVPlistNode.m; sourceTree = "<group>"; };
+		7D2743E41879A4C700DBAFD8 /* JSONSyntaxHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONSyntaxHighlight.h; sourceTree = "<group>"; };
+		7D2743E51879A4C700DBAFD8 /* JSONSyntaxHighlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONSyntaxHighlight.m; sourceTree = "<group>"; };
+		7D2743E61879A4C700DBAFD8 /* STHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHTTPRequest.h; sourceTree = "<group>"; };
+		7D2743E71879A4C700DBAFD8 /* STHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHTTPRequest.m; sourceTree = "<group>"; };
+		7D2743F31879A51E00DBAFD8 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		7D2743F51879A52600DBAFD8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		7D2743F71879A53300DBAFD8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		7D2743FA1879AAC300DBAFD8 /* BTNTwitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTNTwitter.h; sourceTree = "<group>"; };
+		7D2743FB1879AC9B00DBAFD8 /* barberton_crest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barberton_crest.png; path = ../../../../../Downloads/barberton_crest.png; sourceTree = "<group>"; };
+		7D2743FD1879BD9000DBAFD8 /* BTNNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTNNewsDetailViewController.h; sourceTree = "<group>"; };
+		7D2743FE1879BD9000DBAFD8 /* BTNNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNNewsDetailViewController.m; sourceTree = "<group>"; };
+		7D274400187AF97100DBAFD8 /* barberton-0058.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barberton-0058.png"; sourceTree = "<group>"; };
+		7D274401187AF97100DBAFD8 /* barberton-0080.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barberton-0080.png"; sourceTree = "<group>"; };
+		7D274402187AF97100DBAFD8 /* barberton-0120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barberton-0120.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +118,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2743F81879A53300DBAFD8 /* Social.framework in Frameworks */,
+				7D2743F61879A52600DBAFD8 /* Twitter.framework in Frameworks */,
+				7D2743F41879A51E00DBAFD8 /* Accounts.framework in Frameworks */,
 				7D27438E1879A2CC00DBAFD8 /* CoreGraphics.framework in Frameworks */,
 				7D2743901879A2CC00DBAFD8 /* UIKit.framework in Frameworks */,
 				7D27438C1879A2CC00DBAFD8 /* Foundation.framework in Frameworks */,
@@ -106,6 +162,9 @@
 		7D27438A1879A2CC00DBAFD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D2743F71879A53300DBAFD8 /* Social.framework */,
+				7D2743F51879A52600DBAFD8 /* Twitter.framework */,
+				7D2743F31879A51E00DBAFD8 /* Accounts.framework */,
 				7D27438B1879A2CC00DBAFD8 /* Foundation.framework */,
 				7D27438D1879A2CC00DBAFD8 /* CoreGraphics.framework */,
 				7D27438F1879A2CC00DBAFD8 /* UIKit.framework */,
@@ -117,14 +176,18 @@
 		7D2743911879A2CC00DBAFD8 /* barberton */ = {
 			isa = PBXGroup;
 			children = (
+				7D2743F91879AA8500DBAFD8 /* PRIVATE */,
+				7D2743CE1879A4C700DBAFD8 /* STTwitter */,
 				7D27439A1879A2CC00DBAFD8 /* BTNAppDelegate.h */,
 				7D27439B1879A2CC00DBAFD8 /* BTNAppDelegate.m */,
 				7D27439D1879A2CC00DBAFD8 /* Main_iPhone.storyboard */,
 				7D2743A01879A2CC00DBAFD8 /* Main_iPad.storyboard */,
-				7D2743A31879A2CC00DBAFD8 /* BTNFirstViewController.h */,
-				7D2743A41879A2CC00DBAFD8 /* BTNFirstViewController.m */,
-				7D2743A61879A2CC00DBAFD8 /* BTNSecondViewController.h */,
-				7D2743A71879A2CC00DBAFD8 /* BTNSecondViewController.m */,
+				7D2743A31879A2CC00DBAFD8 /* BTNNewsMasterViewController.h */,
+				7D2743A41879A2CC00DBAFD8 /* BTNNewsMasterViewController.m */,
+				7D2743FD1879BD9000DBAFD8 /* BTNNewsDetailViewController.h */,
+				7D2743FE1879BD9000DBAFD8 /* BTNNewsDetailViewController.m */,
+				7D2743A61879A2CC00DBAFD8 /* BTNServicesViewController.h */,
+				7D2743A71879A2CC00DBAFD8 /* BTNServicesViewController.m */,
 				7D2743A91879A2CC00DBAFD8 /* Images.xcassets */,
 				7D2743921879A2CC00DBAFD8 /* Supporting Files */,
 			);
@@ -134,6 +197,10 @@
 		7D2743921879A2CC00DBAFD8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7D274400187AF97100DBAFD8 /* barberton-0058.png */,
+				7D274401187AF97100DBAFD8 /* barberton-0080.png */,
+				7D274402187AF97100DBAFD8 /* barberton-0120.png */,
+				7D2743FB1879AC9B00DBAFD8 /* barberton_crest.png */,
 				7D2743931879A2CC00DBAFD8 /* barberton-Info.plist */,
 				7D2743941879A2CC00DBAFD8 /* InfoPlist.strings */,
 				7D2743971879A2CC00DBAFD8 /* main.m */,
@@ -158,6 +225,53 @@
 				7D2743B91879A2CC00DBAFD8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D2743CE1879A4C700DBAFD8 /* STTwitter */ = {
+			isa = PBXGroup;
+			children = (
+				7D2743CF1879A4C700DBAFD8 /* NSDateFormatter+STTwitter.h */,
+				7D2743D01879A4C700DBAFD8 /* NSDateFormatter+STTwitter.m */,
+				7D2743D11879A4C700DBAFD8 /* NSString+STTwitter.h */,
+				7D2743D21879A4C700DBAFD8 /* NSString+STTwitter.m */,
+				7D2743D31879A4C700DBAFD8 /* STHTTPRequest+STTwitter.h */,
+				7D2743D41879A4C700DBAFD8 /* STHTTPRequest+STTwitter.m */,
+				7D2743D51879A4C700DBAFD8 /* STTwitter.h */,
+				7D2743D61879A4C700DBAFD8 /* STTwitterAPI.h */,
+				7D2743D71879A4C700DBAFD8 /* STTwitterAPI.m */,
+				7D2743D81879A4C700DBAFD8 /* STTwitterAppOnly.h */,
+				7D2743D91879A4C700DBAFD8 /* STTwitterAppOnly.m */,
+				7D2743DA1879A4C700DBAFD8 /* STTwitterHTML.h */,
+				7D2743DB1879A4C700DBAFD8 /* STTwitterHTML.m */,
+				7D2743DC1879A4C700DBAFD8 /* STTwitterOAuth.h */,
+				7D2743DD1879A4C700DBAFD8 /* STTwitterOAuth.m */,
+				7D2743DE1879A4C700DBAFD8 /* STTwitterOS.h */,
+				7D2743DF1879A4C700DBAFD8 /* STTwitterOS.m */,
+				7D2743E01879A4C700DBAFD8 /* STTwitterProtocol.h */,
+				7D2743E11879A4C700DBAFD8 /* Vendor */,
+			);
+			path = STTwitter;
+			sourceTree = "<group>";
+		};
+		7D2743E11879A4C700DBAFD8 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				7D2743E21879A4C700DBAFD8 /* BAVPlistNode.h */,
+				7D2743E31879A4C700DBAFD8 /* BAVPlistNode.m */,
+				7D2743E41879A4C700DBAFD8 /* JSONSyntaxHighlight.h */,
+				7D2743E51879A4C700DBAFD8 /* JSONSyntaxHighlight.m */,
+				7D2743E61879A4C700DBAFD8 /* STHTTPRequest.h */,
+				7D2743E71879A4C700DBAFD8 /* STHTTPRequest.m */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		7D2743F91879AA8500DBAFD8 /* PRIVATE */ = {
+			isa = PBXGroup;
+			children = (
+				7D2743FA1879AAC300DBAFD8 /* BTNTwitter.h */,
+			);
+			name = PRIVATE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +352,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D2743A21879A2CC00DBAFD8 /* Main_iPad.storyboard in Resources */,
+				7D274404187AF97100DBAFD8 /* barberton-0080.png in Resources */,
+				7D2743FC1879AC9B00DBAFD8 /* barberton_crest.png in Resources */,
+				7D274403187AF97100DBAFD8 /* barberton-0058.png in Resources */,
+				7D274405187AF97100DBAFD8 /* barberton-0120.png in Resources */,
 				7D2743AA1879A2CC00DBAFD8 /* Images.xcassets in Resources */,
 				7D27439F1879A2CC00DBAFD8 /* Main_iPhone.storyboard in Resources */,
 				7D2743961879A2CC00DBAFD8 /* InfoPlist.strings in Resources */,
@@ -259,10 +377,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D2743A51879A2CC00DBAFD8 /* BTNFirstViewController.m in Sources */,
+				7D2743EF1879A4C700DBAFD8 /* STTwitterOS.m in Sources */,
+				7D2743E91879A4C700DBAFD8 /* NSString+STTwitter.m in Sources */,
+				7D2743A51879A2CC00DBAFD8 /* BTNNewsMasterViewController.m in Sources */,
+				7D2743F21879A4C700DBAFD8 /* STHTTPRequest.m in Sources */,
+				7D2743F11879A4C700DBAFD8 /* JSONSyntaxHighlight.m in Sources */,
 				7D2743981879A2CC00DBAFD8 /* main.m in Sources */,
 				7D27439C1879A2CC00DBAFD8 /* BTNAppDelegate.m in Sources */,
-				7D2743A81879A2CC00DBAFD8 /* BTNSecondViewController.m in Sources */,
+				7D2743E81879A4C700DBAFD8 /* NSDateFormatter+STTwitter.m in Sources */,
+				7D2743EB1879A4C700DBAFD8 /* STTwitterAPI.m in Sources */,
+				7D2743EA1879A4C700DBAFD8 /* STHTTPRequest+STTwitter.m in Sources */,
+				7D2743ED1879A4C700DBAFD8 /* STTwitterHTML.m in Sources */,
+				7D2743FF1879BD9000DBAFD8 /* BTNNewsDetailViewController.m in Sources */,
+				7D2743EC1879A4C700DBAFD8 /* STTwitterAppOnly.m in Sources */,
+				7D2743EE1879A4C700DBAFD8 /* STTwitterOAuth.m in Sources */,
+				7D2743F01879A4C700DBAFD8 /* BAVPlistNode.m in Sources */,
+				7D2743A81879A2CC00DBAFD8 /* BTNServicesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +533,7 @@
 				GCC_PREFIX_HEADER = "barberton/barberton-Prefix.pch";
 				INFOPLIST_FILE = "barberton/barberton-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -416,6 +547,7 @@
 				GCC_PREFIX_HEADER = "barberton/barberton-Prefix.pch";
 				INFOPLIST_FILE = "barberton/barberton-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
