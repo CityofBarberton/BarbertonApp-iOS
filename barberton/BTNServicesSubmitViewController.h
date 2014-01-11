@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BTNServicesSubmitViewController : UITableViewController <UIWebViewDelegate>
+@interface BTNServicesSubmitViewController : UIViewController <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end

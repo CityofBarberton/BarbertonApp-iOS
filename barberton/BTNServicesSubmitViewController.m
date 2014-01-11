@@ -7,6 +7,19 @@
 //
 
 #import "BTNServicesSubmitViewController.h"
+#import "BTNPlist.h"
+
+#define SITE_URL @"http://webapps.cityofbarberton.com/osTicket/open.alt.php"
+#define SITE_CSRF @"__CSRFToken__"
+#define SITE_ACTION @"a"
+#define SITE_DRAFTID @"draft_id"
+
+#define SITE_TOPIC @"topicId"
+#define SITE_DETAILS @"message"
+
+#define REGEX_INPUT @"<input type=\"(hidden|text)\" .*?>"
+#define REGEX_NAME @"name=\".*?\""
+#define REGEX_VALUE @"value=\".*?\""
 
 #define INPUT_EMAIL 0
 #define INPUT_NAME 1
@@ -23,6 +36,7 @@
 @property (strong, nonatomic) NSString *inputCSRFToken;
 @property (strong, nonatomic) NSString *inputAction;
 @property (strong, nonatomic) NSString *inputDraftId;
+@property BOOL postPage;
 @end
 
 @implementation BTNServicesSubmitViewController
@@ -46,11 +60,57 @@
  * Load the open ticket page to establish a session
  */
 - (void)loadWebPage {
-    NSURL *url = [NSURL URLWithString:@"http://webapps.cityofbarberton.com/osTicket/open.alt.php"];
-    //NSString *body = [NSString stringWithFormat:@"name=%@&email=%@", @"chris",@"a@b.com"];
+    self.postPage = NO;
+    
+    NSURL *url = [NSURL URLWithString:SITE_URL];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    //[request setHTTPMethod: @"POST"];
-    //[request setHTTPBody: [body dataUsingEncoding:NSUTF8StringEncoding]];
+    [self.webView loadRequest:request];
+}
+
+/*
+ * Post back to the open ticket page to create the ticket
+ */
+- (void)postWebPage:(NSString *)html {
+    self.postPage = YES;
+    
+    [self scrapeInputNames:html];
+    
+    BTNPlist *sharedPlist = [BTNPlist sharedPlist];
+    NSMutableDictionary *issueDict = [[NSMutableDictionary alloc] initWithDictionary:sharedPlist.currentIssue];
+    NSMutableString *postData = [[NSMutableString alloc] initWithFormat:@"%@=%@", SITE_CSRF, self.inputCSRFToken];
+    [postData appendFormat:@"&%@=%@", SITE_ACTION, self.inputAction];
+    [postData appendFormat:@"&%@=%@", SITE_TOPIC, issueDict[@"topicid"]];
+    
+    int i = 0;
+    for (NSDictionary *inputName in self.inputNames) {
+        if (i == INPUT_EMAIL) {
+            [postData appendFormat:@"&%@=%@", inputName, sharedPlist.email];
+        } else if (i == INPUT_NAME) {
+            [postData appendFormat:@"&%@=%@", inputName, sharedPlist.name];
+        } else if (i == INPUT_ADDRESS) {
+            [postData appendFormat:@"&%@=%@", inputName, sharedPlist.address];
+        } else if (i == INPUT_PHONE) {
+            [postData appendFormat:@"&%@=%@", inputName, sharedPlist.phone];
+        } else if (i == INPUT_EXT) {
+            [postData appendFormat:@"&%@=%@", inputName, @""];
+        } else if (i == INPUT_SUMMARY) {
+            [postData appendFormat:@"&%@=%@", inputName, issueDict[@"summary"]];
+        } else if (i == INPUT_LOCATION) {
+            [postData appendFormat:@"&%@=%@", inputName, issueDict[@"location"]];
+        } else if (i == INPUT_LAT) {
+            [postData appendFormat:@"&%@=%@", inputName, issueDict[@"lat"]];
+        } else if (i == INPUT_LON) {
+            [postData appendFormat:@"&%@=%@", inputName, issueDict[@"lon"]];
+        }
+        ++i;
+    }
+    [postData appendFormat:@"&%@=%@", SITE_DETAILS, issueDict[@"details"]];
+    
+    NSURL *url = [NSURL URLWithString:SITE_URL];
+    NSString *body = [NSString stringWithString:postData];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod: @"POST"];
+    [request setHTTPBody: [body dataUsingEncoding:NSUTF8StringEncoding]];
     [self.webView loadRequest:request];
 }
 
@@ -58,8 +118,14 @@
  * Catch the load so that we can scrape the session ID and field names
  */
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSString *html = [webView stringByEvaluatingJavaScriptFromString: @"document.body.innerHTML"];
-    [self scrapeInputNames:html];
+    if (!self.postPage) {
+        NSString *html = [webView stringByEvaluatingJavaScriptFromString: @"document.body.innerHTML"];
+        [self postWebPage:html];
+    } else {
+        [self.activityIndicator setHidden:YES];
+        [self.webView setHidden:NO];
+        [self writePlist];
+    }
 }
 
 #pragma mark - Utilities
@@ -78,9 +144,9 @@
     
     NSString *searchedString = [[NSString alloc] initWithString:html];
     NSRange searchedRange = NSMakeRange(0, [searchedString length]);
-    NSString *patternInput = @"<input type=\"(hidden|text)\" .*?>";
-    NSString *patternName = @"name=\".*?\"";
-    NSString *patternValue = @"value=\".*?\"";
+    NSString *patternInput = REGEX_INPUT;
+    NSString *patternName = REGEX_NAME;
+    NSString *patternValue = REGEX_VALUE;
     NSError *error = nil;
     
     // find all the <input /> strings
@@ -100,7 +166,7 @@
             NSString *subMatchTextClean = [subMatchText substringWithRange:NSMakeRange(6, (subMatchText.length - 7))];
             
             // grab and store the CSRF token (and other given) value
-            if ([subMatchTextClean isEqualToString:@"__CSRFToken__"] || [subMatchTextClean isEqualToString:@"a"] || [subMatchTextClean isEqualToString:@"draft_id"]) {
+            if ([subMatchTextClean isEqualToString:SITE_CSRF] || [subMatchTextClean isEqualToString:SITE_ACTION] || [subMatchTextClean isEqualToString:SITE_DRAFTID]) {
                 // find the values for these specific <input /> strings
                 NSRegularExpression *findValues = [NSRegularExpression regularExpressionWithPattern:patternValue options:0 error:&error];
                 NSArray *valueMatches = [findValues matchesInString:matchText options:0 range:subSearchedRange];
@@ -109,11 +175,11 @@
                     NSString *valueText = [matchText substringWithRange:[valueMatch range]];
                     NSString *valueTextClean = [valueText substringWithRange:NSMakeRange(7, (valueText.length - 8))];
                     
-                    if ([subMatchTextClean isEqualToString:@"__CSRFToken__"]) {
+                    if ([subMatchTextClean isEqualToString:SITE_CSRF]) {
                         _inputCSRFToken = valueTextClean;
-                    } else if([subMatchTextClean isEqualToString:@"a"]) {
+                    } else if([subMatchTextClean isEqualToString:SITE_ACTION]) {
                         _inputAction = valueTextClean;
-                    } else if ([subMatchTextClean isEqualToString:@"draft_id"]) {
+                    } else if ([subMatchTextClean isEqualToString:SITE_DRAFTID]) {
                         _inputDraftId = valueTextClean;
                     }
                 }
@@ -124,6 +190,20 @@
             }
         }
     }
+}
+
+- (void)writePlist {
+    BTNPlist *sharedPlist = [BTNPlist sharedPlist];
+    NSMutableDictionary *issueDict = [[NSMutableDictionary alloc] initWithDictionary:sharedPlist.currentIssue];
+    [issueDict setValue:@"" forKey:@"topicid"];
+    [issueDict setValue:@"" forKey:@"topic"];
+    [issueDict setValue:@"" forKey:@"summary"];
+    [issueDict setValue:@"" forKey:@"location"];
+    [issueDict setValue:@"" forKey:@"lat"];
+    [issueDict setValue:@"" forKey:@"lon"];
+    [issueDict setValue:@"" forKey:@"details"];
+    sharedPlist.currentIssue = (NSDictionary*)issueDict;
+    [sharedPlist save];
 }
 
 @end

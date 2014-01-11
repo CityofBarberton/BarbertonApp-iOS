@@ -350,7 +350,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Request Service" id="DZr-ES-JzC">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="KlH-MT-ztw">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="KlH-MT-ztw">
                             <connections>
                                 <segue destination="a1b-ha-Nuh" kind="push" id="Pe5-Ue-KYC"/>
                             </connections>
@@ -371,10 +371,10 @@
             </objects>
             <point key="canvasLocation" x="1658" y="498"/>
         </scene>
-        <!--View Controller - Processing-->
+        <!--Services Submit View Controller - Processing-->
         <scene sceneID="1Cu-tT-7Mh">
             <objects>
-                <viewController id="a1b-ha-Nuh" sceneMemberID="viewController">
+                <viewController id="a1b-ha-Nuh" customClass="BTNServicesSubmitViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AG8-3B-qsF"/>
                         <viewControllerLayoutGuide type="bottom" id="XDC-RH-vTv"/>
@@ -382,9 +382,27 @@
                     <view key="view" contentMode="scaleToFill" id="2X9-XI-DVk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gDy-gy-Ju9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="a1b-ha-Nuh" id="5hk-En-8sZ"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-Ds-EZz">
+                                <rect key="frame" x="150" y="230" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Processing" id="nWw-FL-krR"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="TYd-Ds-EZz" id="jye-Q2-26g"/>
+                        <outlet property="webView" destination="gDy-gy-Ju9" id="4aj-MO-BqS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIc-xh-2NK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
