@@ -48,6 +48,8 @@
         
     } errorBlock:^(NSError *error) {
         NSLog(@"-- error %@", error);
+        //UIAlertView *errorAlert;
+        //id *errorAlertView = [errorAlert initWithTitle:@"Error" message:@"Could not retreive news feed" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     }];
 }
 

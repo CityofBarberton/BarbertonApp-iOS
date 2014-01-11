@@ -11,8 +11,6 @@
 @interface BTNNewsDetailViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, strong) NSDictionary *twitterStatus;
-
 @property (weak, nonatomic) IBOutlet UIWebView *messageText;
-@property (weak, nonatomic) IBOutlet UILabel *dateText;
 
 @end

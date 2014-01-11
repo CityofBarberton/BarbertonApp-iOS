@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D017827187CBB87000229AB /* BTNServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D017826187CBB87000229AB /* BTNServicesViewController.m */; };
+		7D01782A187CD9AD000229AB /* BTNServicesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D017829187CD9AD000229AB /* BTNServicesDetailViewController.m */; };
+		7D017831187CE576000229AB /* BTNPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D017830187CE576000229AB /* BTNPlist.m */; };
+		7D017833187CE706000229AB /* barberton-settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D017832187CE706000229AB /* barberton-settings.plist */; };
 		7D27438C1879A2CC00DBAFD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D27438B1879A2CC00DBAFD8 /* Foundation.framework */; };
 		7D27438E1879A2CC00DBAFD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D27438D1879A2CC00DBAFD8 /* CoreGraphics.framework */; };
 		7D2743901879A2CC00DBAFD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D27438F1879A2CC00DBAFD8 /* UIKit.framework */; };
@@ -16,7 +20,7 @@
 		7D27439F1879A2CC00DBAFD8 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D27439D1879A2CC00DBAFD8 /* Main_iPhone.storyboard */; };
 		7D2743A21879A2CC00DBAFD8 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2743A01879A2CC00DBAFD8 /* Main_iPad.storyboard */; };
 		7D2743A51879A2CC00DBAFD8 /* BTNNewsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743A41879A2CC00DBAFD8 /* BTNNewsMasterViewController.m */; };
-		7D2743A81879A2CC00DBAFD8 /* BTNServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743A71879A2CC00DBAFD8 /* BTNServicesViewController.m */; };
+		7D2743A81879A2CC00DBAFD8 /* BTNServicesSubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743A71879A2CC00DBAFD8 /* BTNServicesSubmitViewController.m */; };
 		7D2743AA1879A2CC00DBAFD8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D2743A91879A2CC00DBAFD8 /* Images.xcassets */; };
 		7D2743B11879A2CC00DBAFD8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2743B01879A2CC00DBAFD8 /* XCTest.framework */; };
 		7D2743B21879A2CC00DBAFD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D27438B1879A2CC00DBAFD8 /* Foundation.framework */; };
@@ -37,7 +41,6 @@
 		7D2743F41879A51E00DBAFD8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2743F31879A51E00DBAFD8 /* Accounts.framework */; };
 		7D2743F61879A52600DBAFD8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2743F51879A52600DBAFD8 /* Twitter.framework */; };
 		7D2743F81879A53300DBAFD8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2743F71879A53300DBAFD8 /* Social.framework */; };
-		7D2743FC1879AC9B00DBAFD8 /* barberton_crest.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D2743FB1879AC9B00DBAFD8 /* barberton_crest.png */; };
 		7D2743FF1879BD9000DBAFD8 /* BTNNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2743FE1879BD9000DBAFD8 /* BTNNewsDetailViewController.m */; };
 		7D274403187AF97100DBAFD8 /* barberton-0058.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D274400187AF97100DBAFD8 /* barberton-0058.png */; };
 		7D274404187AF97100DBAFD8 /* barberton-0080.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D274401187AF97100DBAFD8 /* barberton-0080.png */; };
@@ -45,6 +48,9 @@
 		7D27440F187AFD8200DBAFD8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27440C187AFD8200DBAFD8 /* Default.png */; };
 		7D274410187AFD8200DBAFD8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27440D187AFD8200DBAFD8 /* Default-568h@2x.png */; };
 		7D274411187AFD8200DBAFD8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27440E187AFD8200DBAFD8 /* Default@2x.png */; };
+		7D27441C187B04AE00DBAFD8 /* BTNSafetyWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D27441B187B04AE00DBAFD8 /* BTNSafetyWebViewController.m */; };
+		7D27441F187B07BE00DBAFD8 /* BTNSafetyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D27441E187B07BE00DBAFD8 /* BTNSafetyViewController.m */; };
+		7DD41EF41880AC7E0038EBFA /* BTNServicesTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD41EF31880AC7E0038EBFA /* BTNServicesTopicViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D017825187CBB87000229AB /* BTNServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTNServicesViewController.h; sourceTree = "<group>"; };
+		7D017826187CBB87000229AB /* BTNServicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNServicesViewController.m; sourceTree = "<group>"; };
+		7D017828187CD9AD000229AB /* BTNServicesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTNServicesDetailViewController.h; sourceTree = "<group>"; };
+		7D017829187CD9AD000229AB /* BTNServicesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNServicesDetailViewController.m; sourceTree = "<group>"; };
+		7D01782F187CE576000229AB /* BTNPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTNPlist.h; sourceTree = "<group>"; };
+		7D017830187CE576000229AB /* BTNPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNPlist.m; sourceTree = "<group>"; };
+		7D017832187CE706000229AB /* barberton-settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "barberton-settings.plist"; sourceTree = "<group>"; };
 		7D2743881879A2CC00DBAFD8 /* barberton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barberton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D27438B1879A2CC00DBAFD8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7D27438D1879A2CC00DBAFD8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,8 +85,8 @@
 		7D2743A11879A2CC00DBAFD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		7D2743A31879A2CC00DBAFD8 /* BTNNewsMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTNNewsMasterViewController.h; sourceTree = "<group>"; };
 		7D2743A41879A2CC00DBAFD8 /* BTNNewsMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTNNewsMasterViewController.m; sourceTree = "<group>"; };
-		7D2743A61879A2CC00DBAFD8 /* BTNServicesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTNServicesViewController.h; sourceTree = "<group>"; };
-		7D2743A71879A2CC00DBAFD8 /* BTNServicesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTNServicesViewController.m; sourceTree = "<group>"; };
+		7D2743A61879A2CC00DBAFD8 /* BTNServicesSubmitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTNServicesSubmitViewController.h; sourceTree = "<group>"; };
+		7D2743A71879A2CC00DBAFD8 /* BTNServicesSubmitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTNServicesSubmitViewController.m; sourceTree = "<group>"; };
 		7D2743A91879A2CC00DBAFD8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7D2743AF1879A2CC00DBAFD8 /* barbertonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barbertonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2743B01879A2CC00DBAFD8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -108,7 +121,6 @@
 		7D2743F51879A52600DBAFD8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		7D2743F71879A53300DBAFD8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		7D2743FA1879AAC300DBAFD8 /* BTNTwitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTNTwitter.h; sourceTree = "<group>"; };
-		7D2743FB1879AC9B00DBAFD8 /* barberton_crest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barberton_crest.png; path = ../../../../../Downloads/barberton_crest.png; sourceTree = "<group>"; };
 		7D2743FD1879BD9000DBAFD8 /* BTNNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTNNewsDetailViewController.h; sourceTree = "<group>"; };
 		7D2743FE1879BD9000DBAFD8 /* BTNNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNNewsDetailViewController.m; sourceTree = "<group>"; };
 		7D274400187AF97100DBAFD8 /* barberton-0058.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barberton-0058.png"; sourceTree = "<group>"; };
@@ -117,6 +129,12 @@
 		7D27440C187AFD8200DBAFD8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7D27440D187AFD8200DBAFD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7D27440E187AFD8200DBAFD8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7D27441A187B04AE00DBAFD8 /* BTNSafetyWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTNSafetyWebViewController.h; sourceTree = "<group>"; };
+		7D27441B187B04AE00DBAFD8 /* BTNSafetyWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNSafetyWebViewController.m; sourceTree = "<group>"; };
+		7D27441D187B07BE00DBAFD8 /* BTNSafetyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTNSafetyViewController.h; sourceTree = "<group>"; };
+		7D27441E187B07BE00DBAFD8 /* BTNSafetyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNSafetyViewController.m; sourceTree = "<group>"; };
+		7DD41EF21880AC7E0038EBFA /* BTNServicesTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTNServicesTopicViewController.h; sourceTree = "<group>"; };
+		7DD41EF31880AC7E0038EBFA /* BTNServicesTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNServicesTopicViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +164,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D01782B187CE4D9000229AB /* News */ = {
+			isa = PBXGroup;
+			children = (
+				7D2743A31879A2CC00DBAFD8 /* BTNNewsMasterViewController.h */,
+				7D2743A41879A2CC00DBAFD8 /* BTNNewsMasterViewController.m */,
+				7D2743FD1879BD9000DBAFD8 /* BTNNewsDetailViewController.h */,
+				7D2743FE1879BD9000DBAFD8 /* BTNNewsDetailViewController.m */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		7D01782C187CE4F1000229AB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7D017825187CBB87000229AB /* BTNServicesViewController.h */,
+				7D017826187CBB87000229AB /* BTNServicesViewController.m */,
+				7DD41EF21880AC7E0038EBFA /* BTNServicesTopicViewController.h */,
+				7DD41EF31880AC7E0038EBFA /* BTNServicesTopicViewController.m */,
+				7D017828187CD9AD000229AB /* BTNServicesDetailViewController.h */,
+				7D017829187CD9AD000229AB /* BTNServicesDetailViewController.m */,
+				7D2743A61879A2CC00DBAFD8 /* BTNServicesSubmitViewController.h */,
+				7D2743A71879A2CC00DBAFD8 /* BTNServicesSubmitViewController.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		7D01782D187CE516000229AB /* app */ = {
+			isa = PBXGroup;
+			children = (
+				7D27439A1879A2CC00DBAFD8 /* BTNAppDelegate.h */,
+				7D27439B1879A2CC00DBAFD8 /* BTNAppDelegate.m */,
+				7D27439D1879A2CC00DBAFD8 /* Main_iPhone.storyboard */,
+				7D2743A01879A2CC00DBAFD8 /* Main_iPad.storyboard */,
+				7D01782F187CE576000229AB /* BTNPlist.h */,
+				7D017830187CE576000229AB /* BTNPlist.m */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		7D01782E187CE529000229AB /* Safety */ = {
+			isa = PBXGroup;
+			children = (
+				7D27441D187B07BE00DBAFD8 /* BTNSafetyViewController.h */,
+				7D27441E187B07BE00DBAFD8 /* BTNSafetyViewController.m */,
+				7D27441A187B04AE00DBAFD8 /* BTNSafetyWebViewController.h */,
+				7D27441B187B04AE00DBAFD8 /* BTNSafetyWebViewController.m */,
+			);
+			name = Safety;
+			sourceTree = "<group>";
+		};
 		7D27437F1879A2CC00DBAFD8 = {
 			isa = PBXGroup;
 			children = (
@@ -184,16 +252,10 @@
 			children = (
 				7D2743F91879AA8500DBAFD8 /* PRIVATE */,
 				7D2743CE1879A4C700DBAFD8 /* STTwitter */,
-				7D27439A1879A2CC00DBAFD8 /* BTNAppDelegate.h */,
-				7D27439B1879A2CC00DBAFD8 /* BTNAppDelegate.m */,
-				7D27439D1879A2CC00DBAFD8 /* Main_iPhone.storyboard */,
-				7D2743A01879A2CC00DBAFD8 /* Main_iPad.storyboard */,
-				7D2743A31879A2CC00DBAFD8 /* BTNNewsMasterViewController.h */,
-				7D2743A41879A2CC00DBAFD8 /* BTNNewsMasterViewController.m */,
-				7D2743FD1879BD9000DBAFD8 /* BTNNewsDetailViewController.h */,
-				7D2743FE1879BD9000DBAFD8 /* BTNNewsDetailViewController.m */,
-				7D2743A61879A2CC00DBAFD8 /* BTNServicesViewController.h */,
-				7D2743A71879A2CC00DBAFD8 /* BTNServicesViewController.m */,
+				7D01782D187CE516000229AB /* app */,
+				7D01782B187CE4D9000229AB /* News */,
+				7D01782C187CE4F1000229AB /* Services */,
+				7D01782E187CE529000229AB /* Safety */,
 				7D2743A91879A2CC00DBAFD8 /* Images.xcassets */,
 				7D2743921879A2CC00DBAFD8 /* Supporting Files */,
 			);
@@ -203,10 +265,10 @@
 		7D2743921879A2CC00DBAFD8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7D017832187CE706000229AB /* barberton-settings.plist */,
 				7D274400187AF97100DBAFD8 /* barberton-0058.png */,
 				7D274401187AF97100DBAFD8 /* barberton-0080.png */,
 				7D274402187AF97100DBAFD8 /* barberton-0120.png */,
-				7D2743FB1879AC9B00DBAFD8 /* barberton_crest.png */,
 				7D27440C187AFD8200DBAFD8 /* Default.png */,
 				7D27440E187AFD8200DBAFD8 /* Default@2x.png */,
 				7D27440D187AFD8200DBAFD8 /* Default-568h@2x.png */,
@@ -364,11 +426,11 @@
 				7D27440F187AFD8200DBAFD8 /* Default.png in Resources */,
 				7D274404187AF97100DBAFD8 /* barberton-0080.png in Resources */,
 				7D274410187AFD8200DBAFD8 /* Default-568h@2x.png in Resources */,
-				7D2743FC1879AC9B00DBAFD8 /* barberton_crest.png in Resources */,
 				7D274411187AFD8200DBAFD8 /* Default@2x.png in Resources */,
 				7D274403187AF97100DBAFD8 /* barberton-0058.png in Resources */,
 				7D274405187AF97100DBAFD8 /* barberton-0120.png in Resources */,
 				7D2743AA1879A2CC00DBAFD8 /* Images.xcassets in Resources */,
+				7D017833187CE706000229AB /* barberton-settings.plist in Resources */,
 				7D27439F1879A2CC00DBAFD8 /* Main_iPhone.storyboard in Resources */,
 				7D2743961879A2CC00DBAFD8 /* InfoPlist.strings in Resources */,
 			);
@@ -391,20 +453,26 @@
 			files = (
 				7D2743EF1879A4C700DBAFD8 /* STTwitterOS.m in Sources */,
 				7D2743E91879A4C700DBAFD8 /* NSString+STTwitter.m in Sources */,
+				7DD41EF41880AC7E0038EBFA /* BTNServicesTopicViewController.m in Sources */,
 				7D2743A51879A2CC00DBAFD8 /* BTNNewsMasterViewController.m in Sources */,
 				7D2743F21879A4C700DBAFD8 /* STHTTPRequest.m in Sources */,
 				7D2743F11879A4C700DBAFD8 /* JSONSyntaxHighlight.m in Sources */,
+				7D017827187CBB87000229AB /* BTNServicesViewController.m in Sources */,
+				7D01782A187CD9AD000229AB /* BTNServicesDetailViewController.m in Sources */,
 				7D2743981879A2CC00DBAFD8 /* main.m in Sources */,
 				7D27439C1879A2CC00DBAFD8 /* BTNAppDelegate.m in Sources */,
 				7D2743E81879A4C700DBAFD8 /* NSDateFormatter+STTwitter.m in Sources */,
+				7D017831187CE576000229AB /* BTNPlist.m in Sources */,
 				7D2743EB1879A4C700DBAFD8 /* STTwitterAPI.m in Sources */,
 				7D2743EA1879A4C700DBAFD8 /* STHTTPRequest+STTwitter.m in Sources */,
 				7D2743ED1879A4C700DBAFD8 /* STTwitterHTML.m in Sources */,
 				7D2743FF1879BD9000DBAFD8 /* BTNNewsDetailViewController.m in Sources */,
 				7D2743EC1879A4C700DBAFD8 /* STTwitterAppOnly.m in Sources */,
+				7D27441C187B04AE00DBAFD8 /* BTNSafetyWebViewController.m in Sources */,
 				7D2743EE1879A4C700DBAFD8 /* STTwitterOAuth.m in Sources */,
 				7D2743F01879A4C700DBAFD8 /* BAVPlistNode.m in Sources */,
-				7D2743A81879A2CC00DBAFD8 /* BTNServicesViewController.m in Sources */,
+				7D2743A81879A2CC00DBAFD8 /* BTNServicesSubmitViewController.m in Sources */,
+				7D27441F187B07BE00DBAFD8 /* BTNSafetyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +693,7 @@
 				7D2743C21879A2CC00DBAFD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D2743C31879A2CC00DBAFD8 /* Build configuration list for PBXNativeTarget "barbertonTests" */ = {
 			isa = XCConfigurationList;
@@ -633,6 +702,7 @@
 				7D2743C51879A2CC00DBAFD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
