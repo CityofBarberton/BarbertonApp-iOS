@@ -124,7 +124,7 @@
     } else {
         [self.activityIndicator setHidden:YES];
         [self.webView setHidden:NO];
-        [self writePlist];
+        [self clearIssueFromPlist];
     }
 }
 
@@ -192,8 +192,9 @@
     }
 }
 
-- (void)writePlist {
+- (void)clearIssueFromPlist {
     BTNPlist *sharedPlist = [BTNPlist sharedPlist];
+    // TODO: move this to the BTNPlist class
     NSMutableDictionary *issueDict = [[NSMutableDictionary alloc] initWithDictionary:sharedPlist.currentIssue];
     [issueDict setValue:@"" forKey:PLIST_TOPIC_ID];
     [issueDict setValue:@"" forKey:PLIST_TOPIC];

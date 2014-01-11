@@ -352,7 +352,7 @@
                     <navigationItem key="navigationItem" title="Request Service" id="DZr-ES-JzC">
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="KlH-MT-ztw">
                             <connections>
-                                <segue destination="a1b-ha-Nuh" kind="push" id="Pe5-Ue-KYC"/>
+                                <segue destination="a1b-ha-Nuh" kind="push" identifier="SubmitRequest" id="Pe5-Ue-KYC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
