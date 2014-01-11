@@ -79,7 +79,7 @@
     NSMutableDictionary *issueDict = [[NSMutableDictionary alloc] initWithDictionary:sharedPlist.currentIssue];
     NSMutableString *postData = [[NSMutableString alloc] initWithFormat:@"%@=%@", SITE_CSRF, self.inputCSRFToken];
     [postData appendFormat:@"&%@=%@", SITE_ACTION, self.inputAction];
-    [postData appendFormat:@"&%@=%@", SITE_TOPIC, issueDict[@"topicid"]];
+    [postData appendFormat:@"&%@=%@", SITE_TOPIC, issueDict[PLIST_TOPIC_ID]];
     
     int i = 0;
     for (NSDictionary *inputName in self.inputNames) {
@@ -94,17 +94,17 @@
         } else if (i == INPUT_EXT) {
             [postData appendFormat:@"&%@=%@", inputName, @""];
         } else if (i == INPUT_SUMMARY) {
-            [postData appendFormat:@"&%@=%@", inputName, issueDict[@"summary"]];
+            [postData appendFormat:@"&%@=%@", inputName, issueDict[PLIST_SUMMARY]];
         } else if (i == INPUT_LOCATION) {
-            [postData appendFormat:@"&%@=%@", inputName, issueDict[@"location"]];
+            [postData appendFormat:@"&%@=%@", inputName, issueDict[PLIST_LOCATION]];
         } else if (i == INPUT_LAT) {
-            [postData appendFormat:@"&%@=%@", inputName, issueDict[@"lat"]];
+            [postData appendFormat:@"&%@=%@", inputName, issueDict[PLIST_LAT]];
         } else if (i == INPUT_LON) {
-            [postData appendFormat:@"&%@=%@", inputName, issueDict[@"lon"]];
+            [postData appendFormat:@"&%@=%@", inputName, issueDict[PLIST_LON]];
         }
         ++i;
     }
-    [postData appendFormat:@"&%@=%@", SITE_DETAILS, issueDict[@"details"]];
+    [postData appendFormat:@"&%@=%@", SITE_DETAILS, issueDict[PLIST_DETAILS]];
     
     NSURL *url = [NSURL URLWithString:SITE_URL];
     NSString *body = [NSString stringWithString:postData];
@@ -195,13 +195,13 @@
 - (void)writePlist {
     BTNPlist *sharedPlist = [BTNPlist sharedPlist];
     NSMutableDictionary *issueDict = [[NSMutableDictionary alloc] initWithDictionary:sharedPlist.currentIssue];
-    [issueDict setValue:@"" forKey:@"topicid"];
-    [issueDict setValue:@"" forKey:@"topic"];
-    [issueDict setValue:@"" forKey:@"summary"];
-    [issueDict setValue:@"" forKey:@"location"];
-    [issueDict setValue:@"" forKey:@"lat"];
-    [issueDict setValue:@"" forKey:@"lon"];
-    [issueDict setValue:@"" forKey:@"details"];
+    [issueDict setValue:@"" forKey:PLIST_TOPIC_ID];
+    [issueDict setValue:@"" forKey:PLIST_TOPIC];
+    [issueDict setValue:@"" forKey:PLIST_SUMMARY];
+    [issueDict setValue:@"" forKey:PLIST_LOCATION];
+    [issueDict setValue:@"" forKey:PLIST_LAT];
+    [issueDict setValue:@"" forKey:PLIST_LON];
+    [issueDict setValue:@"" forKey:PLIST_DETAILS];
     sharedPlist.currentIssue = (NSDictionary*)issueDict;
     [sharedPlist save];
 }

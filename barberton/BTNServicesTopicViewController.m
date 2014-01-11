@@ -48,7 +48,7 @@
     }
     
     NSDictionary *tmpDict = [[NSDictionary alloc] initWithDictionary:[self.topics objectAtIndex:indexPath.row]];
-    cell.textLabel.text = tmpDict[@"name"];
+    cell.textLabel.text = tmpDict[PLIST_TOPIC_NAME];
     
     return cell;
 }
@@ -58,11 +58,11 @@
     NSMutableDictionary *issueDict = [[NSMutableDictionary alloc] initWithDictionary:sharedPlist.currentIssue];
     
     NSDictionary *topic = [[NSDictionary alloc] initWithDictionary:[_topics objectAtIndex:self.tableView.indexPathForSelectedRow.row]];
-    NSString *topicName = topic[@"name"];
-    NSNumber *topicValue = topic[@"value"];
+    NSString *topicName = topic[PLIST_TOPIC_NAME];
+    NSNumber *topicValue = topic[PLIST_TOPIC_VALUE];
     
-    [issueDict setValue:topicName forKey:@"topic"];
-    [issueDict setValue:topicValue forKey:@"topicid"];
+    [issueDict setValue:topicName forKey:PLIST_TOPIC];
+    [issueDict setValue:topicValue forKey:PLIST_TOPIC_ID];
     sharedPlist.currentIssue = issueDict;
     
     [sharedPlist save];

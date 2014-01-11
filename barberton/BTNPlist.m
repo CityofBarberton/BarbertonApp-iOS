@@ -49,15 +49,15 @@
     
     plistDictionary = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
     
-    _topics = [[NSArray alloc] initWithArray:plistDictionary[@"topics"]];
+    _topics = [[NSArray alloc] initWithArray:plistDictionary[PLIST_TOPICS]];
     
-    _token = plistDictionary[@"token"];
-    _email = plistDictionary[@"email"];
-    _name = plistDictionary[@"name"];
-    _address = plistDictionary[@"address"];
-    _phone = plistDictionary[@"phone"];
+    _token = plistDictionary[PLIST_TOKEN];
+    _email = plistDictionary[PLIST_EMAIL];
+    _name = plistDictionary[PLIST_NAME];
+    _address = plistDictionary[PLIST_ADDRESS];
+    _phone = plistDictionary[PLIST_PHONE];
     
-    NSArray *plistIssues = [[NSArray alloc] initWithArray:plistDictionary[@"issues"]];
+    NSArray *plistIssues = [[NSArray alloc] initWithArray:plistDictionary[PLIST_ISSUES]];
     _currentIssue = [plistIssues firstObject];
 }
 
@@ -67,15 +67,15 @@
     
     plistDictionary = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
     
-    [plistDictionary setValue:_topics forKey:@"topics"];
-    [plistDictionary setValue:_token forKey:@"token"];
-    [plistDictionary setValue:_email forKey:@"email"];
-    [plistDictionary setValue:_name forKey:@"name"];
-    [plistDictionary setValue:_address forKey:@"address"];
-    [plistDictionary setValue:_phone forKey:@"phone"];
+    [plistDictionary setValue:_topics forKey:PLIST_TOPICS];
+    [plistDictionary setValue:_token forKey:PLIST_TOKEN];
+    [plistDictionary setValue:_email forKey:PLIST_EMAIL];
+    [plistDictionary setValue:_name forKey:PLIST_NAME];
+    [plistDictionary setValue:_address forKey:PLIST_ADDRESS];
+    [plistDictionary setValue:_phone forKey:PLIST_PHONE];
     
     NSArray *issueList = [[NSArray alloc] initWithObjects:_currentIssue, nil];
-    [plistDictionary setValue:issueList forKey:@"issues"];
+    [plistDictionary setValue:issueList forKey:PLIST_ISSUES];
     
     [plistDictionary writeToFile:plistPath atomically:YES];
 }

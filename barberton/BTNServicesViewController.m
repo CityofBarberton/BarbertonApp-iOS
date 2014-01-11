@@ -47,10 +47,10 @@
     [_textViewPhone setText:sharedPlist.phone];
     
     _issueDict = [[NSMutableDictionary alloc] initWithDictionary:sharedPlist.currentIssue];
-    [_textFieldTopic setText:_issueDict[@"topic"]];
-    [_textFieldSummary setText:_issueDict[@"summary"]];
-    [_textFieldLocation setText:_issueDict[@"location"]];
-    [_labelDetails setText:_issueDict[@"details"]];
+    [_textFieldTopic setText:_issueDict[PLIST_TOPIC]];
+    [_textFieldSummary setText:_issueDict[PLIST_SUMMARY]];
+    [_textFieldLocation setText:_issueDict[PLIST_LOCATION]];
+    [_labelDetails setText:_issueDict[PLIST_DETAILS]];
 }
 
 - (void)writePlist {
@@ -61,10 +61,10 @@
     sharedPlist.address = _textViewAddress.text;
     sharedPlist.phone = _textViewPhone.text;
     
-    [_issueDict setValue:_textFieldTopic.text forKey:@"topic"];
-    [_issueDict setValue:_textFieldSummary.text forKey:@"summary"];
-    [_issueDict setValue:_textFieldLocation.text forKey:@"location"];
-    [_issueDict setValue:_labelDetails.text forKey:@"details"];
+    [_issueDict setValue:_textFieldTopic.text forKey:PLIST_TOPIC];
+    [_issueDict setValue:_textFieldSummary.text forKey:PLIST_SUMMARY];
+    [_issueDict setValue:_textFieldLocation.text forKey:PLIST_LOCATION];
+    [_issueDict setValue:_labelDetails.text forKey:PLIST_DETAILS];
     sharedPlist.currentIssue = (NSDictionary*)_issueDict;
     
     [sharedPlist save];

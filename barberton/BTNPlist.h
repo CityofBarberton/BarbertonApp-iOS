@@ -12,6 +12,24 @@
 #define PLIST_RESOURCE @"barberton-settings"
 #define PLIST_TYPE @"plist"
 
+#define PLIST_TOPICS @"topics"
+#define PLIST_TOKEN @"token"
+#define PLIST_EMAIL @"email"
+#define PLIST_NAME @"name"
+#define PLIST_ADDRESS @"address"
+#define PLIST_PHONE @"phone"
+#define PLIST_ISSUES @"issues"
+#define PLIST_TOPIC @"topic"
+#define PLIST_SUMMARY @"summary"
+#define PLIST_LOCATION @"location"
+#define PLIST_LAT @"lat"
+#define PLIST_LON @"lon"
+#define PLIST_DETAILS @"details"
+#define PLIST_TOPIC @"topic"
+#define PLIST_TOPIC_ID @"topicid"
+#define PLIST_TOPIC_NAME @"name"
+#define PLIST_TOPIC_VALUE @"value"
+
 @interface BTNPlist : NSObject
 
 @property (strong, nonatomic) NSArray *topics;

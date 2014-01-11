@@ -26,7 +26,7 @@
     BTNPlist *sharedPlist = [BTNPlist sharedPlist];
     
     NSDictionary *issueDict = [[NSDictionary alloc] initWithDictionary:sharedPlist.currentIssue];
-    [_textView setText:issueDict[@"details"]];
+    [_textView setText:issueDict[PLIST_DETAILS]];
     
     [super viewWillAppear:animated];
 }
@@ -35,7 +35,7 @@
     BTNPlist *sharedPlist = [BTNPlist sharedPlist];
     
     NSMutableDictionary *issueDict = [[NSMutableDictionary alloc] initWithDictionary:sharedPlist.currentIssue];
-    [issueDict setValue:_textView.text forKey:@"details"];
+    [issueDict setValue:_textView.text forKey:PLIST_DETAILS];
     sharedPlist.currentIssue = (NSDictionary*)issueDict;
     
     [sharedPlist save];
