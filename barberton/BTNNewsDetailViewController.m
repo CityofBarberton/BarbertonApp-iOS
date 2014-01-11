@@ -79,6 +79,8 @@
     [dateFormatterOutput setDateFormat:@"MMMM d, yyyy h:mm a"];
     NSString *formattedDateString = [dateFormatterOutput stringFromDate:dateInput];
     
+    // TODO: Add ability to display tweeted images
+    
     NSString *finalText = [[NSString alloc] initWithFormat:@"<body style='margin:1.5em;font-size:larger;'>%@ <div style='color:#666;float:right;margin:1em;font-size:smaller;'>&ndash; %@</div></body>", text, formattedDateString];
     [self.messageText loadHTMLString:finalText baseURL:nil];
 }
