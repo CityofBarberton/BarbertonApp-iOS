@@ -100,7 +100,7 @@
     if ([identifier isEqualToString:@"SubmitRequest"]){
         if ([self.textFieldTopic.text isEqualToString:@""] || [self.textFieldEmail.text isEqualToString:@""] || [self.textViewName.text isEqualToString:@""] || [self.textViewAddress.text isEqualToString:@""] || [self.textViewPhone.text isEqualToString:@""] || [self.textFieldSummary.text isEqualToString:@""] || [self.labelDetails.text isEqualToString:@""]) {
             
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Information" message:@"Please fill in all field so that we can complete your request." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Information" message:@"Please fill in all fields so that we can complete your request." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
             return NO;
         } else {
