@@ -50,6 +50,8 @@
 		7D274411187AFD8200DBAFD8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27440E187AFD8200DBAFD8 /* Default@2x.png */; };
 		7D27441C187B04AE00DBAFD8 /* BTNSafetyWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D27441B187B04AE00DBAFD8 /* BTNSafetyWebViewController.m */; };
 		7D27441F187B07BE00DBAFD8 /* BTNSafetyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D27441E187B07BE00DBAFD8 /* BTNSafetyViewController.m */; };
+		7D8E68DD18857B6A002291CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8E68DC18857B6A002291CF /* MapKit.framework */; };
+		7D8E68E018857C24002291CF /* BTNServicesLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E68DF18857C24002291CF /* BTNServicesLocationViewController.m */; };
 		7DD41EF41880AC7E0038EBFA /* BTNServicesTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD41EF31880AC7E0038EBFA /* BTNServicesTopicViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +135,9 @@
 		7D27441B187B04AE00DBAFD8 /* BTNSafetyWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNSafetyWebViewController.m; sourceTree = "<group>"; };
 		7D27441D187B07BE00DBAFD8 /* BTNSafetyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTNSafetyViewController.h; sourceTree = "<group>"; };
 		7D27441E187B07BE00DBAFD8 /* BTNSafetyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNSafetyViewController.m; sourceTree = "<group>"; };
+		7D8E68DC18857B6A002291CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7D8E68DE18857C24002291CF /* BTNServicesLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTNServicesLocationViewController.h; sourceTree = "<group>"; };
+		7D8E68DF18857C24002291CF /* BTNServicesLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNServicesLocationViewController.m; sourceTree = "<group>"; };
 		7DD41EF21880AC7E0038EBFA /* BTNServicesTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTNServicesTopicViewController.h; sourceTree = "<group>"; };
 		7DD41EF31880AC7E0038EBFA /* BTNServicesTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTNServicesTopicViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D8E68DD18857B6A002291CF /* MapKit.framework in Frameworks */,
 				7D2743F81879A53300DBAFD8 /* Social.framework in Frameworks */,
 				7D2743F61879A52600DBAFD8 /* Twitter.framework in Frameworks */,
 				7D2743F41879A51E00DBAFD8 /* Accounts.framework in Frameworks */,
@@ -184,6 +190,8 @@
 				7DD41EF31880AC7E0038EBFA /* BTNServicesTopicViewController.m */,
 				7D017828187CD9AD000229AB /* BTNServicesDetailViewController.h */,
 				7D017829187CD9AD000229AB /* BTNServicesDetailViewController.m */,
+				7D8E68DE18857C24002291CF /* BTNServicesLocationViewController.h */,
+				7D8E68DF18857C24002291CF /* BTNServicesLocationViewController.m */,
 				7D2743A61879A2CC00DBAFD8 /* BTNServicesSubmitViewController.h */,
 				7D2743A71879A2CC00DBAFD8 /* BTNServicesSubmitViewController.m */,
 			);
@@ -236,6 +244,7 @@
 		7D27438A1879A2CC00DBAFD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D8E68DC18857B6A002291CF /* MapKit.framework */,
 				7D2743F71879A53300DBAFD8 /* Social.framework */,
 				7D2743F51879A52600DBAFD8 /* Twitter.framework */,
 				7D2743F31879A51E00DBAFD8 /* Accounts.framework */,
@@ -470,6 +479,7 @@
 				7D2743EA1879A4C700DBAFD8 /* STHTTPRequest+STTwitter.m in Sources */,
 				7D2743ED1879A4C700DBAFD8 /* STTwitterHTML.m in Sources */,
 				7D2743FF1879BD9000DBAFD8 /* BTNNewsDetailViewController.m in Sources */,
+				7D8E68E018857C24002291CF /* BTNServicesLocationViewController.m in Sources */,
 				7D2743EC1879A4C700DBAFD8 /* STTwitterAppOnly.m in Sources */,
 				7D27441C187B04AE00DBAFD8 /* BTNSafetyWebViewController.m in Sources */,
 				7D2743EE1879A4C700DBAFD8 /* STTwitterOAuth.m in Sources */,
