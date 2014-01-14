@@ -10,24 +10,18 @@
 #import "BTNPlist.h"
 
 @interface BTNServicesLocationViewController ()
-
+@property NSNumber *locationLat;
+@property NSNumber *locationLon;
+@property BOOL useUserLocation;
 @end
 
 @implementation BTNServicesLocationViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self getLocation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,12 +31,46 @@
 }
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    if (self.useUserLocation) {
+        MKCoordinateRegion mapRegion;
+        mapRegion.center = mapView.userLocation.coordinate;
+        mapRegion.span.latitudeDelta = 0.01;
+        mapRegion.span.longitudeDelta = 0.01;
+        
+        [mapView setRegion:mapRegion animated: YES];
+    }
+}
+
+- (void)getLocation {
+    BTNPlist *sharedPlist = [BTNPlist sharedPlist];
+    NSMutableDictionary *issueDict = [[NSMutableDictionary alloc] initWithDictionary:sharedPlist.currentIssue];
+    
+    self.locationLat = issueDict[@"lat"];
+    self.locationLon = issueDict[@"lon"];
+    
+    if (self.locationLat && self.locationLon) {
+        self.useUserLocation = NO;
+        [self dropPinAndZoom];
+    } else {
+        self.useUserLocation = YES;
+    }
+}
+
+- (void)dropPinAndZoom {
+    // drop pin
+    CLLocationCoordinate2D  locationCoordinate;
+    locationCoordinate.latitude = [self.locationLat floatValue];
+    locationCoordinate.longitude = [self.locationLon floatValue];
+    MKPointAnnotation *pointAnnotation = [[MKPointAnnotation alloc] init];
+    pointAnnotation.coordinate = locationCoordinate;
+    [self.mapView addAnnotation:pointAnnotation];
+    
+    // zoom
     MKCoordinateRegion mapRegion;
-    mapRegion.center = mapView.userLocation.coordinate;
+    mapRegion.center = locationCoordinate;
     mapRegion.span.latitudeDelta = 0.01;
     mapRegion.span.longitudeDelta = 0.01;
-    
-    [mapView setRegion:mapRegion animated: YES];
+    [self.mapView setRegion:mapRegion animated: YES];
 }
 
 - (IBAction)saveLocation:(id)sender {
