@@ -37,7 +37,9 @@
     NSDictionary *entities = [status valueForKey:@"entities"];
     NSArray *urls = [entities valueForKey:@"urls"];
     NSArray *user_mentions = [entities valueForKey:@"user_mentions"];
+    NSArray *media = [entities valueForKey:@"media"];
     
+    // expand "RT @name" to "From: First Last"
     NSDictionary *retweeted_status = [status valueForKey:@"retweeted_status"];
     if (retweeted_status) {
         NSDictionary *user = [retweeted_status valueForKey:@"user"];
@@ -47,6 +49,7 @@
         text = newText;
     }
     
+    // display urls in pretty form
     for (int i = 0; i < urls.count; ++i) {
         NSDictionary *urlDict = urls[i];
         NSString *url = [urlDict valueForKey:@"url"];
@@ -59,15 +62,28 @@
         }
     }
     
+    // expand "@name" to "First Last"
     for (int i = 0; i < user_mentions.count; ++i) {
         NSDictionary *umDict = user_mentions[i];
         NSString *name = [umDict valueForKey:@"name"];
         NSString *screen_name = [umDict valueForKey:@"screen_name"];
-        NSString *nameFull = [[NSString alloc] initWithFormat:@"<div style='margin-bottom:.5em;'>From %@:</div>", name];
-        NSString *snFull = [[NSString alloc] initWithFormat:@"%@", screen_name];
+        NSString *nameFull = [[NSString alloc] initWithFormat:@"%@", name];
+        NSString *snFull = [[NSString alloc] initWithFormat:@"@%@", screen_name];
         
         if (name && screen_name) {
             [text replaceOccurrencesOfString:snFull withString:nameFull options:NSCaseInsensitiveSearch range:NSMakeRange(0, [text length])];
+        }
+    }
+    
+    // expand attached images
+    for (int i = 0; i < media.count; ++i) {
+        NSDictionary *mediaDict = media[i];
+        NSString *media_url = [mediaDict valueForKey:@"media_url"];
+        NSString *url = [mediaDict valueForKey:@"url"];
+        NSString *imgTag = [[NSString alloc] initWithFormat:@"<img src='%@' style='margin:1em 0; width:100%%' />", media_url];
+        
+        if (url && imgTag) {
+            [text replaceOccurrencesOfString:url withString:imgTag options:NSCaseInsensitiveSearch range:NSMakeRange(0, [text length])];
         }
     }
     
@@ -78,10 +94,9 @@
     NSDateFormatter *dateFormatterOutput = [[NSDateFormatter alloc] init];
     [dateFormatterOutput setDateFormat:@"MMMM d, yyyy h:mm a"];
     NSString *formattedDateString = [dateFormatterOutput stringFromDate:dateInput];
-    
-    // TODO: Add ability to display tweeted images
-    
+        
     NSString *finalText = [[NSString alloc] initWithFormat:@"<body style='margin:1.5em;font-size:larger;'>%@ <div style='color:#666;float:right;margin:1em;font-size:smaller;'>&ndash; %@</div></body>", text, formattedDateString];
+    
     [self.messageText loadHTMLString:finalText baseURL:nil];
 }
 

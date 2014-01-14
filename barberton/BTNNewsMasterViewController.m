@@ -33,6 +33,7 @@
 #pragma mark - Get data
 
 - (void)getTwitterStatuses {
+    // TODO: get rid of all the NSLog messages
     STTwitterAPI *twitter = [STTwitterAPI twitterAPIAppOnlyWithConsumerKey:TWITTER_CONSUMER_KEY consumerSecret:TWITTER_CONSUMER_TOKEN];
     
     [twitter verifyCredentialsWithSuccessBlock:^(NSString *bearerToken) {
@@ -41,6 +42,7 @@
         [twitter getUserTimelineWithScreenName:@"BarbertonCity" successBlock:^(NSArray *statuses) {
             //NSLog(@"-- statuses: %@", statuses);
             self.twitterStatuses = statuses;
+            // TODO: store this in core data, maybe (then have to consider deleted tweets)
             [self.tableView reloadData];
         } errorBlock:^(NSError *error) {
             NSLog(@"-- error: %@", error);
@@ -71,6 +73,7 @@
     NSString *text = [status valueForKey:@"text"];
     NSString *dateString = [status valueForKey:@"created_at"];
     
+    // remove the "RT @name: " part of retweets for the list view
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"RT .*?: " options:NSRegularExpressionCaseInsensitive error:&error];
     NSString *finalText = [regex stringByReplacingMatchesInString:text options:0 range:NSMakeRange(0, [text length]) withTemplate:@""];
