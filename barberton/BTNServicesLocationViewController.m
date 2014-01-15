@@ -32,12 +32,7 @@
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
     if (self.useUserLocation) {
-        MKCoordinateRegion mapRegion;
-        mapRegion.center = mapView.userLocation.coordinate;
-        mapRegion.span.latitudeDelta = 0.01;
-        mapRegion.span.longitudeDelta = 0.01;
-        
-        [mapView setRegion:mapRegion animated: YES];
+        [self zoomToUser];
     }
 }
 
@@ -48,11 +43,12 @@
     self.locationLat = issueDict[@"lat"];
     self.locationLon = issueDict[@"lon"];
     
-    if (self.locationLat && self.locationLon) {
+    if (([self.locationLat floatValue] == 0) && ([self.locationLon floatValue] == 0)) {
+        self.useUserLocation = YES;
+        [self zoomToUser];
+    } else {
         self.useUserLocation = NO;
         [self dropPinAndZoom];
-    } else {
-        self.useUserLocation = YES;
     }
 }
 
@@ -70,6 +66,21 @@
     mapRegion.center = locationCoordinate;
     mapRegion.span.latitudeDelta = 0.01;
     mapRegion.span.longitudeDelta = 0.01;
+    [self.mapView setRegion:mapRegion animated: YES];
+}
+
+- (void)zoomToUser {
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = self.mapView.userLocation.coordinate;
+    mapRegion.span.latitudeDelta = 0.01;
+    mapRegion.span.longitudeDelta = 0.01;
+    
+    if ((self.mapView.userLocation.coordinate.latitude == 0) && (self.mapView.userLocation.coordinate.longitude == 0)) {
+        // given no other location, put them in Lake Anna
+        mapRegion.center.latitude = 41.015;
+        mapRegion.center.longitude = -81.6106;
+    }
+    
     [self.mapView setRegion:mapRegion animated: YES];
 }
 
