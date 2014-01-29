@@ -1,0 +1,8 @@
+.DS_Store
+._*
+
+BTNTwitter.h
+
+*.xcuserstate
+*.xcsettings
+*.xcbkptlist
