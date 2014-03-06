@@ -5,6 +5,15 @@
 //  Created by Christopher Stoll on 1/7/14.
 //  Copyright (c) 2014 Christopher Stoll. All rights reserved.
 //
+//  This was designed for use with the BTNServices* classes
+//  They need to share little bits of information, implementing
+//  CoreData seemed like overkill, so did setting up listeners
+//  and sending messages that way; besides I wan any data in the
+//  services tab to persist until a request is submited (some
+//  data, such as name and email, will persist forever).
+//
+//  Perhaps there is a better way to do this?
+//
 
 #import <Foundation/Foundation.h>
 

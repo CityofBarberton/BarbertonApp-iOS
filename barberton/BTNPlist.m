@@ -15,18 +15,28 @@
 
 @implementation BTNPlist
 
-/*
- * to set up a singleton
+static BTNPlist *_sharedBTNPlist = nil;
+static dispatch_once_t onceToken = 0;
+
+/**
+ * Create singleton
  */
 + (id)sharedPlist {
-    static BTNPlist *sharedBTNPlist = nil;
-    
-    static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedBTNPlist = [[self alloc] init];
+        if (_sharedBTNPlist == nil) {
+            _sharedBTNPlist = [[BTNPlist alloc] init];
+        }
     });
     
-    return sharedBTNPlist;
+    return _sharedBTNPlist;
+}
+
+/**
+ * Mutator for singleton testing
+ */
++ (void)setSharedPlist:(BTNPlist *)instance {
+    onceToken = 0;
+    _sharedBTNPlist = instance;
 }
 
 - (id)init {
