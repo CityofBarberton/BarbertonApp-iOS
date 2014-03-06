@@ -402,7 +402,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gDy-gy-Ju9">
+                            <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDy-gy-Ju9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -416,6 +416,12 @@
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gDy-gy-Ju9" secondAttribute="bottom" id="6HN-9c-dho"/>
+                            <constraint firstItem="gDy-gy-Ju9" firstAttribute="leading" secondItem="2X9-XI-DVk" secondAttribute="leading" id="6pG-L3-LQN"/>
+                            <constraint firstItem="gDy-gy-Ju9" firstAttribute="top" secondItem="2X9-XI-DVk" secondAttribute="top" id="jhq-pF-D81"/>
+                            <constraint firstAttribute="trailing" secondItem="gDy-gy-Ju9" secondAttribute="trailing" id="zNb-vT-ETz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Processing" id="nWw-FL-krR"/>
                     <connections>
@@ -477,8 +483,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSs-Je-1fn">
-                                <rect key="frame" x="-1" y="0.0" width="320" height="480"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSs-Je-1fn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="JmE-3F-5M7" id="q7R-qN-5wI"/>
@@ -486,6 +492,12 @@
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hSs-Je-1fn" secondAttribute="bottom" id="PVI-ax-wjW"/>
+                            <constraint firstAttribute="trailing" secondItem="hSs-Je-1fn" secondAttribute="trailing" id="bUS-de-pqj"/>
+                            <constraint firstItem="hSs-Je-1fn" firstAttribute="top" secondItem="I1c-7H-jnI" secondAttribute="top" id="djb-xT-2Ll"/>
+                            <constraint firstItem="hSs-Je-1fn" firstAttribute="leading" secondItem="I1c-7H-jnI" secondAttribute="leading" id="jpZ-G5-net"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Location" id="Mjc-Uf-ZWn">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="txV-zp-DL4">
@@ -674,13 +686,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xA-L6-S7o">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xA-L6-S7o">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4xA-L6-S7o" secondAttribute="trailing" id="2Oy-Ex-bHX"/>
+                            <constraint firstItem="4xA-L6-S7o" firstAttribute="top" secondItem="4UA-aJ-NQz" secondAttribute="top" id="Mwk-GQ-sgE"/>
+                            <constraint firstItem="4xA-L6-S7o" firstAttribute="leading" secondItem="4UA-aJ-NQz" secondAttribute="leading" id="sCt-Cn-GsC"/>
+                            <constraint firstAttribute="bottom" secondItem="4xA-L6-S7o" secondAttribute="bottom" id="z9J-Mb-5Sb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="t3L-uO-FSq">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="WEc-So-g03">
