@@ -76,7 +76,41 @@
     // remove the "RT @name: " part of retweets for the list view
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"RT .*?: " options:NSRegularExpressionCaseInsensitive error:&error];
-    NSString *finalText = [regex stringByReplacingMatchesInString:text options:0 range:NSMakeRange(0, [text length]) withTemplate:@""];
+    NSString *initialText = [regex stringByReplacingMatchesInString:text options:0 range:NSMakeRange(0, [text length]) withTemplate:@""];
+    
+    // Fix &amp; display
+    error = NULL;
+    NSRegularExpression *regexB = [NSRegularExpression regularExpressionWithPattern:@"&amp;" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSString *intermediateText = [regexB stringByReplacingMatchesInString:initialText options:0 range:NSMakeRange(0, [initialText length]) withTemplate:@"&"];
+    
+    //
+    // TODO: pull this out to another class, it is duplicated from the details screen
+    //
+    
+    // Make other format adjustments
+    NSDictionary *entities = [status valueForKey:@"entities"];
+    //NSArray *urls = [entities valueForKey:@"urls"];
+    NSArray *user_mentions = [entities valueForKey:@"user_mentions"];
+    //NSArray *media = [entities valueForKey:@"media"];
+    
+    // expand ".@name" to "First Last"
+    NSMutableString *workingText = [[NSMutableString alloc] initWithString:intermediateText];
+    for (int i = 0; i < user_mentions.count; ++i) {
+        NSDictionary *umDict = user_mentions[i];
+        NSString *name = [umDict valueForKey:@"name"];
+        NSString *screen_name = [umDict valueForKey:@"screen_name"];
+        NSString *nameFull = [[NSString alloc] initWithFormat:@"%@", name];
+        NSString *snFull = [[NSString alloc] initWithFormat:@".@%@", screen_name];
+        NSString *nameFullReply = @"...";
+        NSString *snFullReply = [[NSString alloc] initWithFormat:@"@%@", screen_name];
+        //NSString *snFull = @"";
+        
+        if (name && screen_name) {
+            [workingText replaceOccurrencesOfString:snFull withString:nameFull options:NSCaseInsensitiveSearch range:NSMakeRange(0, [workingText length])];
+            [workingText replaceOccurrencesOfString:snFullReply withString:nameFullReply options:NSCaseInsensitiveSearch range:NSMakeRange(0, [workingText length])];
+        }
+    }
+    NSString *finalText = [[NSString alloc] initWithString:workingText];
     
     NSDateFormatter *dateFormatterInput = [[NSDateFormatter alloc] init];
     [dateFormatterInput setDateFormat:@"EEE MMM dd HH:mm:ss Z yyyy"];

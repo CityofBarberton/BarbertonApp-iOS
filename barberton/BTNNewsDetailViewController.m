@@ -69,8 +69,10 @@
         NSString *screen_name = [umDict valueForKey:@"screen_name"];
         NSString *nameFull = [[NSString alloc] initWithFormat:@"%@", name];
         NSString *snFull = [[NSString alloc] initWithFormat:@"@%@", screen_name];
+        NSString *snFullDot = [[NSString alloc] initWithFormat:@".@%@", screen_name];
         
         if (name && screen_name) {
+            [text replaceOccurrencesOfString:snFullDot withString:nameFull options:NSCaseInsensitiveSearch range:NSMakeRange(0, [text length])];
             [text replaceOccurrencesOfString:snFull withString:nameFull options:NSCaseInsensitiveSearch range:NSMakeRange(0, [text length])];
         }
     }
